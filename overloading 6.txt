@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+contract OverloadingExample {
+// Function with one parameter
+function add(uint256 a) public pure returns (uint256) {
+return a + 1;
+}
+// Overloaded function with two parameters
+function add(uint256 a, uint256 b) public pure returns (uint256) {
+return a + b;
+}
+// Another overloaded function with two parameters of different types
+function add(uint256 a, uint256 b, uint256 c) public pure returns
+(uint256) {
+return a + b + c;
+}
+}

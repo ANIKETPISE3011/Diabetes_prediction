@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract OperatorExample {
+    uint256 public comparisonResult;
+    bool public logicalResult;
+    uint256 public assignmentResult;
+    uint256 public ternaryResult;
+
+    function comparison(uint256 a, uint256 b) public {
+        if (a == b) {
+            comparisonResult = 0; // Equal
+        } else if (a > b) {
+            comparisonResult = 1; // Greater Than
+        } else {
+            comparisonResult = 2; // Less Than
+        }
+    }
+
+    function logical(bool a, bool b) public {
+        logicalResult = (a && b) || (!a && !b); // Logical XOR
+    }
+
+    function assignment(uint256 a) public {
+        assignmentResult = a;
+        assignmentResult += 10; // Addition Assignment
+        assignmentResult *= 2;  // Multiplication Assignment
+        assignmentResult /= 3;  // Division Assignment
+    }
+
+    function ternary(uint256 a, uint256 b) public {
+        ternaryResult = (a > b) ? a : b; // Ternary Operator
+    }
+}
